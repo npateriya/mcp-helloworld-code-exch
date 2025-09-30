@@ -3,6 +3,8 @@ MCP HelloWorld for Code Exchange with web MCP Inspector. This repo contains a ti
 
 Cisco-internal demo: https://app.vidcast.io/share/0a514521-2c77-4580-a2dd-69532c8bfeb3
 
+**Note: Demo video instructions are based on older MCP Inspector IDE, now need fewer steps(please refer next section for updated steps)**
+
 ## Try it in Cisco DevNet DevEnv (no local setup)
 Click to launch a browser-based environment with this repo pre-cloned and FastMCP preinstalled:
 
@@ -11,28 +13,17 @@ Click to launch a browser-based environment with this repo pre-cloned and FastMC
 Note: This DevEnv link is Cisco-internal.
 
 Once the DevEnv opens:
-- Clone repo `git clone https://github.com/npateriya/mcp-helloworld-code-exch`
 - Change working dir `cd mcp-helloworld-code-exch`
 - Install requirements `pip install -r requirements.txt`
 - Start the server (HTTP on 9000) if needed: `python demo_mcp.py`
   - MCP server endpoint: `http://127.0.0.1:9000/mcp` (transport: streamable-http)
-- To open the MCP Inspector via the proxy, run this in a new terminal tab ('+' to open a new tab):
-
-```bash
-./scripts/mcp_inspector_url.sh
-```
-
-<details>
-<summary>Show raw echo command for mcp inspector URL</summary>
-
-```bash
-echo "${DEVENV_APP_8080_URL}?MCP_PROXY_AUTH_TOKEN=${DEVENV_PASSWORD}&MCP_PROXY_FULL_ADDRESS=${DEVENV_APP_8081_URL}"
-```
-
-</details>
-
-Open the printed URL in a new tab. In Inspector, choose the appropriate transport (HTTP/STDIO based on your use) and connect. You should see logs like 200 OK requests in the DevEnv terminal when invoking tools.
-  - MCP server endpoint: `http://127.0.0.1:9000/mcp` (transport: streamable-http). Configure these in MCP Inspector and test tools.
+- On right side of IDE in MCP Inspector, configure below settings and `Connect` to local MCP server.
+  - Transport Type : Streamable HTTP
+  - URL : http://127.0.0.1:9000/mcp
+- Go to tools tab and after listing tool, explore and try out these tools
+  - _roll_dice
+  - _nslookup
+  - _cidr_info_ipv4
 
 ### Local run (quick)
 If you prefer local instead of DevEnv:
