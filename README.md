@@ -1,5 +1,5 @@
 # MCP HelloWorld for Code Exchange – integrated MCP Inspector Demo
-MCP HelloWorld for Code Exchange with web MCP Inspector. This repo contains a tiny FastMCP server and a simple demo that you can run locally or instantly in Cisco DevNet DevEnv. It showcases three small tools that are handy for quick testing and network workflows: `roll_dice` (random dice), `nslookup` (DNS lookup wrapper), and `cidr_info_ipv4` (IPv4 subnet facts). Use the "Run MCP Inspector IDE in Cloud" button to launch a preconfigured environment, then open the included MCP Inspector to invoke the tools.
+MCP HelloWorld for Code Exchange with web MCP Inspector. This repo contains a tiny FastMCP server and a simple demo that you can run locally or instantly in Cisco DevNet CodeExchange DevEnv. It showcases three small tools that are handy for quick testing and network workflows: `roll_dice` (random dice), `nslookup` (DNS lookup wrapper), and `cidr_info_ipv4` (IPv4 subnet facts). Use the "Run MCP Inspector IDE in Cloud" button to launch a preconfigured environment, then open the included MCP Inspector to invoke the tools.
 
 ## Demo
 
@@ -21,7 +21,7 @@ Select any tool, add inputs, and execute—bringing your entire build-deploy-tes
 ## Try it in Cisco DevNet DevEnv (no local setup)
 Click to launch a browser-based environment with this repo pre-cloned and FastMCP preinstalled:
 
-[![Run MCP Inspector IDE in Cloud](assets/run-in-cloud-ide.svg)](https://testing-developer.cisco.com/devenv/?id=devenv-base-mcp-inspector&GITHUB_SOURCE_REPO=https://github.com/npateriya/mcp-helloworld-code-exch)
+[![Run MCP Inspector IDE in Cloud](assets/run-in-cloud-ide.svg)](https://developer.cisco.com/codeexchange/devenv/npateriya/mcp-helloworld-code-exch)
 
 Note: This DevEnv link is Cisco-internal.
 
