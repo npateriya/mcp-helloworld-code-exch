@@ -21,7 +21,7 @@ Select any tool, add inputs, and execute—bringing your entire build-deploy-tes
 ## Try it in Cisco DevNet DevEnv (no local setup)
 Click to launch a browser-based environment with this repo pre-cloned and FastMCP preinstalled:
 
-[![Run MCP Inspector IDE in Cloud](assets/run-in-cloud-ide.svg)](https://developer.cisco.com/codeexchange/devenv/npateriya/mcp-helloworld-code-exch)
+[![Run in Cisco Cloud IDE](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-runable-icon.svg)](https://developer.cisco.com/codeexchange/devenv/npateriya/mcp-helloworld-code-exch/)
 
 Once the DevEnv opens:
 - Change working dir `cd mcp-helloworld-code-exch`
