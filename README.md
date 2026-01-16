@@ -23,8 +23,6 @@ Click to launch a browser-based environment with this repo pre-cloned and FastMC
 
 [![Run MCP Inspector IDE in Cloud](assets/run-in-cloud-ide.svg)](https://developer.cisco.com/codeexchange/devenv/npateriya/mcp-helloworld-code-exch)
 
-Note: This DevEnv link is Cisco-internal.
-
 Once the DevEnv opens:
 - Change working dir `cd mcp-helloworld-code-exch`
 - Install requirements `pip install -r requirements.txt`
