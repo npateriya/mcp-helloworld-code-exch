@@ -1,9 +1,22 @@
 # MCP HelloWorld for Code Exchange – integrated MCP Inspector Demo
-MCP HelloWorld for Code Exchange with web MCP Inspector. This repo contains a tiny FastMCP server and a simple demo that you can run locally or instantly in Cisco DevNet DevEnv. It showcases three small tools that are handy for quick testing and network workflows: `roll_dice` (random dice), `nslookup` (DNS lookup wrapper), and `cidr_info_ipv4` (IPv4 subnet facts). Use the "Run MCP Inspector IDE in Cloud" button to launch a preconfigured environment, then open the included MCP Inspector to invoke the tools. A short internal demo recording is linked below for a quick walkthrough.
+MCP HelloWorld for Code Exchange with web MCP Inspector. This repo contains a tiny FastMCP server and a simple demo that you can run locally or instantly in Cisco DevNet DevEnv. It showcases three small tools that are handy for quick testing and network workflows: `roll_dice` (random dice), `nslookup` (DNS lookup wrapper), and `cidr_info_ipv4` (IPv4 subnet facts). Use the "Run MCP Inspector IDE in Cloud" button to launch a preconfigured environment, then open the included MCP Inspector to invoke the tools.
 
-Cisco-internal demo: https://app.vidcast.io/share/0a514521-2c77-4580-a2dd-69532c8bfeb3
+## Demo
 
-**Note: Demo video instructions are based on older MCP Inspector IDE, now need fewer steps(please refer next section for updated steps)**
+### Load MCPs
+Instantly connect your MCP server to the Inspector and work side-by-side—no window-switching needed.
+
+![Load MCPs Demo](assets/load_mcp-demo.gif)
+
+### Show tools
+Explore all available MCP tools through the Inspector's intuitive GUI for a seamless discovery experience.
+
+![Show Tools Demo](assets/show_tools-demo.gif)
+
+### Run live tests
+Select any tool, add inputs, and execute—bringing your entire build-deploy-test loop together in one place.
+
+![Run Tools Demo](assets/run_tools-demo.gif)
 
 ## Try it in Cisco DevNet DevEnv (no local setup)
 Click to launch a browser-based environment with this repo pre-cloned and FastMCP preinstalled:
@@ -20,10 +33,10 @@ Once the DevEnv opens:
 - On right side of IDE in MCP Inspector, configure below settings and `Connect` to local MCP server.
   - Transport Type : Streamable HTTP
   - URL : http://127.0.0.1:9000/mcp
-- Go to tools tab and after listing tool, explore and try out these tools
-  - _roll_dice
-  - _nslookup
-  - _cidr_info_ipv4
+- Go to Tools tab, list tools, and try out:
+  - `roll_dice`
+  - `nslookup`
+  - `cidr_info_ipv4`
 
 ### Local run (quick)
 If you prefer local instead of DevEnv:
@@ -34,8 +47,6 @@ python -m pip install -r requirements.txt
 python demo_mcp.py
 ```
 
-
-
 ## What this demo provides
 - **roll_dice(sides=6, rolls=1)**: Returns individual dice results and total.
 - **nslookup(name, record?, server?, timeout=5.0)**: Wraps the system `nslookup` for quick DNS checks. Returns `ok`, `exit_code`, `command`, `stdout`, `stderr`.
@@ -43,15 +54,6 @@ python demo_mcp.py
 
 ## Requirements
 - `nslookup` available on your system (macOS has it by default). Verify with: `which nslookup`.
-
-## Quick start (venv)
-```bash
-cd mcp-helloworld-code-exch
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -U pip wheel setuptools
-python -m pip install -r requirements.txt
-```
 
 ## Run as HTTP (Streamable) on port 9000
 The script is configured to start an HTTP MCP server on `http://127.0.0.1:9000/mcp`.
@@ -64,7 +66,6 @@ python demo_mcp.py
 Health checks / quick probes:
 - Base server: `curl -i http://127.0.0.1:9000/`
 - MCP endpoint (expects MCP client payloads): `curl -i http://127.0.0.1:9000/mcp` (GET may return 406; that still confirms the endpoint is up.)
-
 
 ## Tool reference
 ### cidr_info_ipv4
@@ -101,4 +102,3 @@ Output:
 ```json
 { "sides": 6, "rolls": 3, "results": [2, 6, 5], "total": 13 }
 ```
-
